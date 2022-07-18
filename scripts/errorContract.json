@@ -1,0 +1,14 @@
+{
+  "400XX00": {"var": "ErrBadRequest", "msg": "Bad Request"},
+  "400XX01": {"var": "ErrInvalidFieldFormat", "msg": "Invalid Field Format %s"},
+  "400XX02": {"var": "ErrInvalidFieldMandatory", "msg": "Invalid Mandatory Field %s"},
+  "401XX00": {"var": "ErrUnauthorized","msg": "Unauthorized. %s"},
+  "401XX01": {"var": "ErrTokenInvalid", "msg": "Invalid Token (B2B)"},
+  "404XX12": {"var": "ErrInvalidBill", "msg": "Invalid Bill/Virtual Account"},
+  "404XX13": {"var": "ErrInvalidAmount", "msg": "Invalid Amount"},
+  "404XX14": {"var": "ErrPaidBill", "msg": "Paid Bill"},
+  "404XX19": {"var": "ErrBillExpired", "msg": "Expired Bill"},
+  "409XX00": {"var": "ErrConflict", "msg": "Conflict"},
+  "500XX00": {"var": "ErrGeneralError", "msg": "General Error"},
+  "500XX02": {"var": "ErrInternalServerError", "msg": "Unknown Error"}
+}
