@@ -1,8 +1,12 @@
 pipeline {
     agent any
-    stages ("build and deploy") {
-        steps {
-            echo 'build and deploy'
+    stages {
+        stage('Example') {
+            steps {
+                /* CORRECT */
+                echo 'hello world'
+                sh('ls -al')
+            }
         }
     }
 }
