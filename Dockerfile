@@ -6,7 +6,7 @@ WORKDIR $GOPATH/src/github.com/Saucon/go-rest-api-sample
 COPY go.* ./
 RUN go mod tidy
 RUN go mod download
-RUN go get
+RUN go get ./...
 
 # COPY All things inside the project and build
 COPY . .
