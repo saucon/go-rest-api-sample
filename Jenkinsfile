@@ -8,6 +8,7 @@ pipeline {
             steps {
                 echo 'hello world'
                 sh('ls -al')
+                sh('cat .env')
                 sh('cp \$ENV_GORESTSAMPLE .')
                 sh('cat .env')
                 sh('docker build -f Dockerfile -t my_sample_app:latest .')
