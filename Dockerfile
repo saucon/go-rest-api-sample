@@ -9,10 +9,6 @@ COPY go.* ./
 ENV GO111MODULE=on
 ENV GOFLAGS=-mod=mod
 
-RUN go mod tidy
-RUN go mod download
-RUN go get ./...
-
 # COPY All things inside the project and build
 COPY . .
 RUN go build $GOPATH/src/github.com/Saucon/go-rest-api-sample/cmd/my_sample_app
