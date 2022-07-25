@@ -4,6 +4,7 @@ WORKDIR $GOPATH/src/github.com/Saucon/go-rest-api-sample
 
 # COPY go.mod, go.sum and download the dependencies
 COPY go.* ./
+RUN go mod tidy
 RUN go mod download
 
 # COPY All things inside the project and build
