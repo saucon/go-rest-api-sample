@@ -2,8 +2,13 @@ FROM golang:1.18-alpine as builder
 
 WORKDIR $GOPATH/src/github.com/Saucon/go-rest-api-sample
 
+
 # COPY go.mod, go.sum and download the dependencies
 COPY go.* ./
+
+ENV GO111MODULE=on
+ENV GOFLAGS=-mod=mod
+
 RUN go mod tidy
 RUN go mod download
 RUN go get ./...
