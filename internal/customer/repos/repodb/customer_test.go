@@ -13,7 +13,7 @@ import (
 
 func TestAddCustomerDB(t *testing.T) {
 
-	env.NewEnv(os.ExpandEnv("$GOPATH/src/github.com/Saucon/go-rest-api-sample/.env.local"))
+	env.NewEnv(os.ExpandEnv("$GOPATH/src/github.com/Saucon/go-rest-api-sample/.env"))
 	cfg := env.Config
 
 	dBase := db.NewDB(cfg, false)
@@ -34,7 +34,7 @@ func TestAddCustomerDB(t *testing.T) {
 
 func TestGetAllCustomerDB(t *testing.T) {
 	var customers []models.Customer
-	env.NewEnv(os.ExpandEnv("$GOPATH/src/github.com/Saucon/go-rest-api-sample/local/.env.local"))
+	env.NewEnv(os.ExpandEnv("$GOPATH/src/github.com/Saucon/go-rest-api-sample/local/.env"))
 	cfg := env.Config
 
 	dBase := db.NewDB(cfg, false)
@@ -64,7 +64,7 @@ func TestGetAllCustomerDB(t *testing.T) {
 
 func TestDeleteAllCustomerDB(t *testing.T) {
 
-	env.NewEnv(os.ExpandEnv("$GOPATH/src/github.com/Saucon/go-rest-api-sample/local/.env.local"))
+	env.NewEnv(os.ExpandEnv("$GOPATH/src/github.com/Saucon/go-rest-api-sample/local/.env"))
 	cfg := env.Config
 
 	dBase := db.NewDB(cfg, false)
