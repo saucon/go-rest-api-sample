@@ -9,12 +9,11 @@ import (
 	"github.com/Saucon/go-rest-api-sample/internal/customer/controller"
 	"github.com/Saucon/go-rest-api-sample/internal/customer/repos/repodb"
 	"github.com/Saucon/go-rest-api-sample/internal/customer/usecase"
-	"os"
 )
 
 func main() {
 	// get env
-	env.NewEnv(os.ExpandEnv("$GOPATH/src/github.com/Saucon/go-rest-api-sample/local/.env.local"))
+	env.NewEnv(".env")
 	cfg := env.Config
 
 	// init db
